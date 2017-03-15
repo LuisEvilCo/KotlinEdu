@@ -1,5 +1,6 @@
-fun foo(name: String, number: Int, toUpperCase: Boolean) =
-        (if (toUpperCase) name.toUpperCase() else name) + number
+fun foo(name: String, number: Int ?= 42, toUpperCase: Boolean = false): String {
+    return (if (toUpperCase) name.toUpperCase() else name) + number
+}
 
 fun useFoo() = listOf(
         foo("a"),

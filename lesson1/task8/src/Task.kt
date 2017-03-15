@@ -1,7 +1,9 @@
 fun sendMessageToClient(
         client: Client?, message: String?, mailer: Mailer
 ){
-    TODO()
+    if(client != null && message != null && client?.personalInfo != null && client?.personalInfo?.email !=null){
+        mailer.sendMessage(client.personalInfo.email,message )
+    }
 }
 
 class Client (val personalInfo: PersonalInfo?)

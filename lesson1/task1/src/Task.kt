@@ -1,1 +1,3 @@
-fun start(): String = TODO()
+fun start(): String  {
+    return "OK"
+}
